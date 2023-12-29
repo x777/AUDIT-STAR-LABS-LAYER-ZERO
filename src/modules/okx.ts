@@ -1,10 +1,11 @@
+// @audit - DONE
 import ccxt from "ccxt";
 import logger from "../utilities/logger.js";
-import {getRandomDigital, getRandomInt} from "../utilities/random_utils.js";
-import {getBalances, sleep} from "../utilities/common.js";
-import {Balances} from "../utilities/interfaces.js";
-import {CHAINS, TICKERS} from "../utilities/constants.js";
-import {exchange, networks} from "../config.js";
+import { getRandomDigital, getRandomInt } from "../utilities/random_utils.js";
+import { getBalances, sleep } from "../utilities/common.js";
+import { Balances } from "../utilities/interfaces.js";
+import { CHAINS, TICKERS } from "../utilities/constants.js";
+import { exchange, networks } from "../config.js";
 
 
 export class Okx {

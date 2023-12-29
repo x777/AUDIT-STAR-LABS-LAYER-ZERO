@@ -1,6 +1,7 @@
-import {getContract, getRPC} from "./common.js";
-import {Chain, Ticker} from "./interfaces.js";
-import {exchange} from "../config.js";
+// @audit - DONE
+import { getContract, getRPC } from "./common.js";
+import { Chain, Ticker } from "./interfaces.js";
+import { exchange } from "../config.js";
 
 
 export const PROVIDERS = {
@@ -15,53 +16,53 @@ export const PROVIDERS = {
     klaytn: await getRPC('https://rpc.ankr.com/klaytn'),
 }
 
-export const TICKERS: Ticker[]  =
-[
-    {
-        name: 'polygon',
-        network: "Polygon",
-        symbol: "MATIC",
-        fee: 0.1,
-        amount: exchange.amounts.polygon,
+export const TICKERS: Ticker[] =
+    [
+        {
+            name: 'polygon',
+            network: "Polygon",
+            symbol: "MATIC",
+            fee: 0.1,
+            amount: exchange.amounts.polygon,
 
-    },
-    {
-        name: 'celo',
-        network: "Celo",
-        symbol: "CELO",
-        fee: 0.0008,
-        amount: exchange.amounts.celo,
+        },
+        {
+            name: 'celo',
+            network: "Celo",
+            symbol: "CELO",
+            fee: 0.0008,
+            amount: exchange.amounts.celo,
 
-    },
-    {
-        name: 'moonbeam',
-        network: "Moonbeam",
-        symbol: "GLMR",
-        fee: 0.01,
-        amount: exchange.amounts.moonbeam,
-    },
-    {
-        name: 'moonriver',
-        network: "Moonriver",
-        symbol: "MOVR",
-        fee: 0.0001,
-        amount: exchange.amounts.moonriver,
-    },
-    {
-        name: 'conflux',
-        network: "CFX_EVM",
-        symbol: "CFX",
-        fee: 1,
-        amount: exchange.amounts.conflux,
-    },
-    {
-        name: 'klaytn',
-        network: "Klaytn",
-        symbol: "KLAY",
-        fee: 0.004,
-        amount: exchange.amounts.klaytn,
-    }
-]
+        },
+        {
+            name: 'moonbeam',
+            network: "Moonbeam",
+            symbol: "GLMR",
+            fee: 0.01,
+            amount: exchange.amounts.moonbeam,
+        },
+        {
+            name: 'moonriver',
+            network: "Moonriver",
+            symbol: "MOVR",
+            fee: 0.0001,
+            amount: exchange.amounts.moonriver,
+        },
+        {
+            name: 'conflux',
+            network: "CFX_EVM",
+            symbol: "CFX",
+            fee: 1,
+            amount: exchange.amounts.conflux,
+        },
+        {
+            name: 'klaytn',
+            network: "Klaytn",
+            symbol: "KLAY",
+            fee: 0.004,
+            amount: exchange.amounts.klaytn,
+        }
+    ]
 
 export const ABI = {
     erc20: '[{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_symbol","type":"string"},{"internalType":"uint256","name":"_initialSupply","type":"uint256"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"spender","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"decimals","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"subtractedValue","type":"uint256"}],"name":"decreaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"addedValue","type":"uint256"}],"name":"increaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint8","name":"decimals_","type":"uint8"}],"name":"setupDecimals","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"nonpayable","type":"function"}]',
@@ -76,7 +77,7 @@ const CONTRACT_ADDRESSES = {
     polygon: {
         merkly: "0x0E1f20075C90Ab31FC2Dd91E536e6990262CF76d",
         l2pass: "0x222228060E7Efbb1D78BB5D454581910e3922222",
-        zerius: "0x2ef766b59e4603250265EcC468cF38a6a00b84b3",
+        zerius: "0x2ef766b59e4603250265EcC468cF38a6a00b84b3", //@audit - unknown  address
         l2telegraph: "0x523d5581A0bb8BB2Bc9f23B5202894E31124eA3e",
     },
     celo: {
@@ -107,12 +108,13 @@ const CONTRACT_ADDRESSES = {
     },
 }
 
+// @audit - unknown addresses 
 export const ZERIUS_REFUEL_CONTRACTS: any = {
-    145 : '0x1fe2c567169d39CCc5299727FfAC96362b2Ab90E',
-    116 : '0x5B209E7c81DEaad0ffb8b76b696dBb4633A318CD',
-    153 : '0xB47D82aA70f839dC27a34573f135eD6dE6CED9A5',
-    125 : '0xFF21d5a3a8e3E8BA2576e967888Deea583ff02f8',
-    126 : '0xb0bea3bB2d6EDDD2014952ABd744660bAeF9747d',
+    145: '0x1fe2c567169d39CCc5299727FfAC96362b2Ab90E',
+    116: '0x5B209E7c81DEaad0ffb8b76b696dBb4633A318CD',
+    153: '0xB47D82aA70f839dC27a34573f135eD6dE6CED9A5',
+    125: '0xFF21d5a3a8e3E8BA2576e967888Deea583ff02f8',
+    126: '0xb0bea3bB2d6EDDD2014952ABd744660bAeF9747d',
 }
 
 export const CHAINS: Record<string, Chain> = {
@@ -137,6 +139,7 @@ export const CHAINS: Record<string, Chain> = {
                 dstChains: [125, 126, 145, 167, 177, 230],
             },
         },
+        // @audit - what are spenders addresses?
         spenders: [
             "0x07e56b727e0EAcFa53823977599905024c2de4F0", "0x643770E279d5D0733F21d6DC03A8efbABf3255B4",
             "0x1111111254EEB25477B68fb85Ed929f73A960582", "0xDEF171Fe48CF0115B1d80b88dc8eAB59176FEe57",
@@ -167,6 +170,7 @@ export const CHAINS: Record<string, Chain> = {
                 dstChains: [126, 145],
             },
         },
+        // @audit - what are spenders addresses?
         spenders: [
             "0x000000000022d473030f116ddee9f6b43ac78ba3", "0xaB235da7f52d35fb4551AfBa11BFB56e18774A65",
             "0xe3d8bd6aed4f159bc8000a9cd47cffdb95f96121", "0x471EcE3750Da237f93B8E339c536989b8978a438",
@@ -192,6 +196,7 @@ export const CHAINS: Record<string, Chain> = {
                 dstChains: [145, 125, 116],
             },
         },
+        // @audit - what are spenders addresses?
         spenders: [
             "0x843D0AAD40295f2198ef528ad747CDF6AB9000e4", "0xd95fe880d7717f7f20981FE6e41A2315f3EFeAb5",
             "0x603eF396029b5e89f9420b4192814aEC0664ADAb", "0xd3B02Ff30c218c7f7756BA14bcA075Bf7C2C951e",
@@ -199,7 +204,8 @@ export const CHAINS: Record<string, Chain> = {
         tokens: [
             "0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73", "0x931715FEE2d06333043d11F658C8CE934aC61D0c",
             "0x4792C1EcB969B036eb51330c63bD27899A13D84e", "0x3405A1bd46B85c5C029483FbECf2F3E611026e45",
-            "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",
+            "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b", // @audit - This token is bridged from its native chain using Multichain. But Metamsk mark this website as:
+            // https://metamask.github.io/phishing-warning/v3.0.0/#hostname=multichain.org&href=https%3A%2F%2Fmultichain.org%2F
         ],
     },
     moonriver: {
@@ -219,6 +225,7 @@ export const CHAINS: Record<string, Chain> = {
                 dstChains: [177],
             },
         },
+        // @audit - what are spenders addresses?
         spenders: [
             "0x7af71799C40F952237eAA4D81A77C1af49125113", "0xD8FC27ec222E8d5172CD63aC453C6Dfb7467a3C7",
             "0xFB45b575b66C99e0C8d2639aCf237807d4ea1508",
@@ -239,6 +246,7 @@ export const CHAINS: Record<string, Chain> = {
                 dstChains: [125],
             },
         },
+        // @audit - what are spenders addresses?
         spenders: [
             "0x62b0873055Bf896DD869e172119871ac24aEA305",
         ],
@@ -265,6 +273,7 @@ export const CHAINS: Record<string, Chain> = {
                 dstChains: [125, 126, 150],
             },
         },
+        // @audit - what are spenders addresses?
         spenders: [
             "0x1111111254EEB25477B68fb85Ed929f73A960582", "0x7A4af156379f512DE147ed3b96393047226d923F",
             "0xBA12222222228d8Ba445958a75a0704d566BF2C8", "0x6093AeBAC87d62b1A5a4cEec91204e35020E38bE",
@@ -288,7 +297,8 @@ export const CHAINS: Record<string, Chain> = {
                 dstChains: [145],
             },
         },
-        spenders: [ "0xe0fbB27D0E7F3a397A67a9d4864D4f4DD7cF8cB9", "0xF7BF3499Df413aC09C4BC8F7521EB4953B5f7bda"],
+        // @audit - what are spenders addresses?
+        spenders: ["0xe0fbB27D0E7F3a397A67a9d4864D4f4DD7cF8cB9", "0xF7BF3499Df413aC09C4BC8F7521EB4953B5f7bda"],
         tokens: [
             "0x34d21b1e550d73cee41151c77f3c73359527a396", "0xcee8faf64bb97a73bb51e115aa89c17ffa8dd167",
             "0x574e9c26bda8b95d7329505b4657103710eb32ea", "0x754288077d0ff82af7a5317c7cb8c444d421d103",

@@ -1,10 +1,11 @@
-import {ethers} from "ethers";
-import {getRandomDigital, getRandomInt} from "../utilities/random_utils.js";
-import {handleResponse, retry} from "../utilities/wrappers.js";
+// @audit - DONE
+import { ethers } from "ethers";
+import { getRandomDigital, getRandomInt } from "../utilities/random_utils.js";
+import { handleResponse, retry } from "../utilities/wrappers.js";
 import logger from "../utilities/logger.js";
-import {CHAINS} from "../utilities/constants.js";
-import {Network} from "../utilities/interfaces.js";
-import {getOverrides} from "../utilities/common.js";
+import { CHAINS } from "../utilities/constants.js";
+import { Network } from "../utilities/interfaces.js";
+import { getOverrides } from "../utilities/common.js";
 
 export class MerklyRefuel {
     private readonly wallet: ethers.Wallet;

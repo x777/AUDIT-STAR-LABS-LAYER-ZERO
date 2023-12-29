@@ -1,10 +1,11 @@
-import {ethers} from "ethers";
-import {generateRandomString} from "../utilities/random_utils.js";
-import {handleResponse, retry} from "../utilities/wrappers.js";
+// @audit - DONE
+import { ethers } from "ethers";
+import { generateRandomString } from "../utilities/random_utils.js";
+import { handleResponse, retry } from "../utilities/wrappers.js";
 import logger from "../utilities/logger.js";
-import {CHAINS} from "../utilities/constants.js";
-import {Network} from "../utilities/interfaces.js";
-import {getOverrides} from "../utilities/common.js";
+import { CHAINS } from "../utilities/constants.js";
+import { Network } from "../utilities/interfaces.js";
+import { getOverrides } from "../utilities/common.js";
 
 export class L2Telegraph {
     private readonly wallet: ethers.Wallet;
@@ -30,7 +31,7 @@ export class L2Telegraph {
                 const message = generateRandomString();
 
                 let trustedRemote = ethers.utils.solidityPack(
-                    ['address','address'],
+                    ['address', 'address'],
                     [this.contract.address, this.contract.address]
                 );
 

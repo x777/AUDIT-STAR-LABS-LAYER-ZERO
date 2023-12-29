@@ -1,16 +1,17 @@
-import {ethers} from "ethers";
-import {Okx} from "./modules/okx.js";
+// @audit - DONE
+import { ethers } from "ethers";
+import { Okx } from "./modules/okx.js";
 import logger from "./utilities/logger.js";
-import {retry} from "./utilities/wrappers.js";
-import {MerklyRefuel} from "./modules/merkly.js";
-import {ZeriusRefuel} from "./modules/zerius.js";
-import {L2PassRefuel} from "./modules/l2pass.js";
-import {L2Telegraph} from "./modules/l2telegraph.js";
-import {PROVIDERS} from "./utilities/constants.js";
-import {Balances, Network, Protocol} from "./utilities/interfaces.js";
-import {getRandomInt, getRandomNetworkAndProtocol} from "./utilities/random_utils.js";
-import {randomApprove, getBalances, getPrivateKeys, sleep, checkGas} from "./utilities/common.js";
-import {approve, exchange, initializationTime, iterationRange, pause} from "./config.js";
+import { retry } from "./utilities/wrappers.js";
+import { MerklyRefuel } from "./modules/merkly.js";
+import { ZeriusRefuel } from "./modules/zerius.js";
+import { L2PassRefuel } from "./modules/l2pass.js";
+import { L2Telegraph } from "./modules/l2telegraph.js";
+import { PROVIDERS } from "./utilities/constants.js";
+import { Balances, Network, Protocol } from "./utilities/interfaces.js";
+import { getRandomInt, getRandomNetworkAndProtocol } from "./utilities/random_utils.js";
+import { randomApprove, getBalances, getPrivateKeys, sleep, checkGas } from "./utilities/common.js";
+import { approve, exchange, initializationTime, iterationRange, pause } from "./config.js";
 
 class Main {
     private readonly privateKeys: string[];

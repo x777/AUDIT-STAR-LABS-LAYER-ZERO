@@ -1,7 +1,8 @@
-import {CHAINS} from "./constants.js";
-import {Balances, Network, Protocol} from "./interfaces.js";
-import {maxGasPrice, networks, protocols} from "../config.js";
-import {getGasPrice} from "./common.js";
+// @audit - DONE
+import { CHAINS } from "./constants.js";
+import { Balances, Network, Protocol } from "./interfaces.js";
+import { maxGasPrice, networks, protocols } from "../config.js";
+import { getGasPrice } from "./common.js";
 
 export function getRandomInt(min: number, max: number) {
     min = Math.ceil(min);

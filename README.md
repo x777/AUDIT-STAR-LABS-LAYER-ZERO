@@ -1,3 +1,172 @@
+![Tux, the Linux mascot](/assets/logo.png)
+
+# Отчет аудита
+
+### Оригинальный репозиторий: https://github.com/0xStarLabs/STAR-LABS-LAYER-ZERO
+
+### Audit Commit hash:        `e7d88dee0c45537d197b478c493ca82ee4b39da9`
+
+---
+
+### Адреса контрактов с файла `src/constants` которые были найдены в официальных источниках:
+
+### `Протоколы:`
+
+| Protocol     | Chain     | Address                                    | 
+|--------------|-----------|--------------------------------------------|
+| merkly       | polygon   | 0x0E1f20075C90Ab31FC2Dd91E536e6990262CF76d |
+| l2pass       | polygon   | 0x222228060E7Efbb1D78BB5D454581910e3922222 |
+| l2telegraph  | polygon   | 0x523d5581A0bb8BB2Bc9f23B5202894E31124eA3e |
+| l2telegraph  | celo      | 0x83017335bae4837016311bdb75df5a320b54d636 |
+| l2telegraph  | gnosis    | 0xE266EedB13A69AF15c1756a241021905B1827F6A |
+| l2telegraph  | moonriver | 0x5B10aE182C297ec76fE6fe0E3Da7c4797ceDE02D |
+| merkly       | celo      | 0xC20A842e1Fc2681920C1A190552A2f13C46e7fCF |
+| merkly       | gnosis    | 0x556F119C7433b2232294FB3De267747745A1dAb4 |
+| merkly       | moonbeam  | 0x671861008497782F7108D908D4dF18eBf9598b82 |
+| merkly       | moonriver | 0xd379c3D0930d70022B3C6EBA8217e4B990705540 |
+| merkly       | conflux   | 0xE47b05F2026a82048caAECf5caE58e5AAE2405eA |
+| merkly       | klaytn    | 0x79DB0f1A83f8e743550EeB5DD5B0B83334F2F083 |
+| l2pass       | celo      | 0x222228060E7Efbb1D78BB5D454581910e3922222 |
+| l2pass       | gnosis    | 0x222228060E7Efbb1D78BB5D454581910e3922222 |
+| l2pass       | moonbeam  | 0x222228060E7Efbb1D78BB5D454581910e3922222 |
+| l2pass       | moonriver | 0x222228060E7Efbb1D78BB5D454581910e3922222 |
+| l2pass       | klaytn    | 0x222228060E7Efbb1D78BB5D454581910e3922222 |
+
+### `Токены:`
+
+| Token         | Chain    | Address                                    |
+|---------------|----------|--------------------------------------------|
+| USDT          | polygon  | 0xc2132D05D31c914a87C6611C10748AEb04B58e8F |
+| BNB           | polygon  | 0x3BA4c387f786bFEE076A58914F5Bd38d668B42c3 |
+| USDC          | polygon  | 0x3c499c542cEF5E3811e1192ce70d8cC03d5c3359 |
+| USDC.e        | polygon  | 0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174 |
+| BUSD          | polygon  | 0xdAb529f40E671A1D4bF91361c21bf9f0C9712ab7 |
+| AVAX          | polygon  | 0x2C89bbc92BD86F8075d1DEcc58C7F4E0107f286b |
+| USDT          | celo     | 0x617f3112bf5397D0467D315cC709EF968D9ba546 |
+| USDC          | celo     | 0xef4229c8c3250C675F21BCefa42f58EfbfF6002a |
+| USDC(Wormhole)| celo     | 0x37f750B7cC259A2f741AF45294f6a16572CF5cAd |
+| WBTC          | celo     | 0xD629eb00dEced2a080B7EC630eF6aC117e614f1b |
+| CELO          | celo     | 0x471EcE3750Da237f93B8E339c536989b8978a438 |
+| SUSHI         | celo     | 0x29dFce9c22003A4999930382Fd00f9Fd6133Acd1 |
+| USDT          | moonbeam | 0xeFAeeE334F0Fd1712f9a8cc375f427D9Cdd40d73 |
+| USDC(Wormhole)| moonbeam | 0x931715FEE2d06333043d11F658C8CE934aC61D0c |
+| AVAX          | moonbeam | 0x4792C1EcB969B036eb51330c63bD27899A13D84e |
+| MATIC         | moonbeam | 0x3405A1bd46B85c5C029483FbECf2F3E611026e45 |
+| USDC(Multichain)| moonbeam | 0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b |
+| USDT          | moonriver| 0xB44a9B6905aF7c801311e8F4E76932ee959c663C |
+| USDC          | moonriver| 0xE3F5a90F9cb311505cd691a46596599aA1A0AD7D |
+| DAI           | moonriver| 0x80A16016cC4A2E6a2CACA8a4a498b1699fF0f844 |
+| WMOVR         | moonriver| 0x98878B06940aE243284CA214f92Bb71a2b032B8A |
+| USDT          | conflux  | 0xfe97e85d13abd9c1c33384e796f10b73905637ce |
+| ETH           | conflux  | 0xa47f43de2f9623acb395ca4905746496d2014d57 |
+| USDC          | conflux  | 0x6963efed0ab40f6c3d7bda44a05dcf1437c44372 |
+| BNB           | conflux  | 0x94bd7a37d2ce24cc597e158facaa8d601083ffec |
+| xCFX          | conflux  | 0x889138644274a7dc602f25a7e7d53ff40e6d0091 |
+| WCFX          | conflux  | 0x14b2d3bc65e74dae1030eafd8ac30c533c976a9b |
+| USDT          | gnosis   | 0x4ECaBa5870353805a9F068101A40E0f32ed605C6 |
+| USDC          | gnosis   | 0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83 |
+| LINK          | gnosis   | 0xE2e73A1c69ecF83F464EFCE6A5be353a37cA09b2 |
+| MATIC         | gnosis   | 0x7122d7661c4564b7C6Cd4878B06766489a6028A2 |
+| oETH          | klaytn   | 0x34d21b1e550d73cee41151c77f3c73359527a396 |
+| oUSDT         | klaytn   | 0xcee8faf64bb97a73bb51e115aa89c17ffa8dd167 |
+| oBNB          | klaytn   | 0x574e9c26bda8b95d7329505b4657103710eb32ea |
+| oUSDC         | klaytn   | 0x754288077d0ff82af7a5317c7cb8c444d421d103 |
+| KDAI          | klaytn   | 0x5c74070fdea071359b86082bd9f9b3deaafbe32b |
+
+---
+<br>
+
+###  Не найденные адреса контрактов с файла `src/constants`: 
+
+`строка 80`:
+``` javascript
+    zerius: "0x2ef766b59e4603250265EcC468cF38a6a00b84b3"
+```
+
+`строка 112`:
+
+``` javascript
+    export const ZERIUS_REFUEL_CONTRACTS: any = {
+    145: '0x1fe2c567169d39CCc5299727FfAC96362b2Ab90E',
+    116: '0x5B209E7c81DEaad0ffb8b76b696dBb4633A318CD',
+    153: '0xB47D82aA70f839dC27a34573f135eD6dE6CED9A5',
+    125: '0xFF21d5a3a8e3E8BA2576e967888Deea583ff02f8',
+    126: '0xb0bea3bB2d6EDDD2014952ABd744660bAeF9747d',
+}
+```
+
+`строка 143`:
+
+```javascript
+    spenders: [
+                "0x07e56b727e0EAcFa53823977599905024c2de4F0", "0x643770E279d5D0733F21d6DC03A8efbABf3255B4",
+                "0x1111111254EEB25477B68fb85Ed929f73A960582", "0xDEF171Fe48CF0115B1d80b88dc8eAB59176FEe57",
+                "0x4E3288c9ca110bCC82bf38F09A7b425c095d92Bf",
+
+            ],
+```
+`строка 174`:
+
+```javascript
+    spenders: [
+            "0x000000000022d473030f116ddee9f6b43ac78ba3", "0xaB235da7f52d35fb4551AfBa11BFB56e18774A65",
+            "0xe3d8bd6aed4f159bc8000a9cd47cffdb95f96121", "0x471EcE3750Da237f93B8E339c536989b8978a438",
+
+        ],
+```
+`строка 200`:
+```javascript
+    spenders: [
+        "0x843D0AAD40295f2198ef528ad747CDF6AB9000e4", "0xd95fe880d7717f7f20981FE6e41A2315f3EFeAb5",
+        "0x603eF396029b5e89f9420b4192814aEC0664ADAb", "0xd3B02Ff30c218c7f7756BA14bcA075Bf7C2C951e",
+    ],
+```
+
+`строка 229`:
+```javascript
+    spenders: [
+            "0x7af71799C40F952237eAA4D81A77C1af49125113", "0xD8FC27ec222E8d5172CD63aC453C6Dfb7467a3C7",
+            "0xFB45b575b66C99e0C8d2639aCf237807d4ea1508",
+        ]
+```
+
+`строка 250`:
+```javascript
+    spenders: [
+            "0x62b0873055Bf896DD869e172119871ac24aEA305",
+        ]
+```
+
+`строка 277`:
+```javascript
+    spenders: [
+            "0x1111111254EEB25477B68fb85Ed929f73A960582", "0x7A4af156379f512DE147ed3b96393047226d923F",
+            "0xBA12222222228d8Ba445958a75a0704d566BF2C8", "0x6093AeBAC87d62b1A5a4cEec91204e35020E38bE",
+        ]
+```
+
+`строка 301`:
+```javascript
+    spenders: ["0xe0fbB27D0E7F3a397A67a9d4864D4f4DD7cF8cB9", "0xF7BF3499Df413aC09C4BC8F7521EB4953B5f7bda"]
+```
+
+Адреса `spenders` используются автором как: 
+> апрувы случайных токенов для случайных протоколов на супер мелкие суммы
+
+>> | approve | Ставите либо true либо false. Если true будет делать апрувы случайных токенов для случайных протоколов на супер мелкие суммы. Смысл в том, чтобы не кидать одни только транзакции л0 подряд. |
+
+## Рекомендации после аудита кода: 
+    1. Осторожное использование 'approve' параметра: Применяйте параметр 'approve' в config.ts на строке 10 только в том случае, если вы полностью доверяете контрактам, связанным с адресами в указанной сети.
+
+    2. Отказ от использования протокола zerius: Не рекомендуется использовать протокол zerius в данном скрипте, поскольку адреса контрактов, представленные автором, не были найдены в официальных источника в ходе проверки.
+
+    3. Отсутствие вредоносного кода: В ходе аудита вредоносный код не был обнаружен.
+
+---
+
+<details>
+  <summary>Original README</summary>
+
 # STAR-LABS-LAYER-ZERO
 
 ## [SEE ENGLISH VERSION BELOW ](https://github.com/0xStarLabs/STAR-LABS-LAYER-ZERO#english-version)👇
@@ -152,3 +321,4 @@ Data in the data folder:
 | Name | Description |
 | --- | --- |
 | private_keys.txt |	Private keys |
+</details>
